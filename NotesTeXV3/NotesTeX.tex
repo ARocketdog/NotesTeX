@@ -147,7 +147,7 @@
 			\caption{Margintable}
 		\end{margintable}	\end{enumerate}
 
-	\begin{remark}\textbf{Why use both \texttt{marginnotes} and \texttt{sidenotes}?}
+	\begin{remark}{Why use both \texttt{marginnotes} and \texttt{sidenotes}?}{}
 		Quite simply, \texttt{marginnotes} overlap each other if they are too close whereas \texttt{sidenotes} both numbers and dynamically aligns all side notes, figures, and tables. However \texttt{sidenotes} cannot be used in equations, \texttt{multicols}, and with the \texttt{tcolorbox}\sn{See \ref{Sub:Special} and \ref{Sec: Fullpage} for more details.} environment. As the majority of the special environments from \texttt{amsthm} are modified to use \texttt{tcolorbox}, \texttt{marginnotes} becomes an essential part of \textit{NotesTeX}.
 	\end{remark}
 	
@@ -159,7 +159,7 @@
 
 	There is one issue with this however. Since we are using a \texttt{tcolorbox}, this proof environment is incompatible with \texttt{$\backslash$sn} and \texttt{$\backslash$sidenote}, as it results in a \textbf{Float(s) Error}. However, this environment is compatible with \texttt{$\backslash$mn} and \texttt{$\backslash$marginnote}.
 
-	\begin{definition}
+	\begin{definition}{}{}
 		The \texttt{definition} environment and the associated \texttt{tcolorbox} are provided by the following code in \texttt{NotesTeX.sty}:
 		\begin{verbatim}
 			\tcolorboxenvironment{definition}{
@@ -175,7 +175,7 @@
 			}
 		\end{verbatim}
 	\end{definition}
-	\begin{theorem}
+	\begin{theorem}{}{}
 		The \texttt{theorem} environment and the associated \texttt{tcolorbox} are provided by the following code in \texttt{NotesTeX.sty}:
 		\begin{verbatim}
 			\tcolorboxenvironment{theorem}{
@@ -191,7 +191,7 @@
 			}
 		\end{verbatim}
 	\end{theorem}
-	\begin{lemma}
+	\begin{lemma}{}{}
 		The \texttt{lemma} environment and the associated \texttt{tcolorbox} are provided by the following code in \texttt{NotesTeX.sty}:
 		\begin{verbatim}
 		\tcolorboxenvironment{lemma}{
@@ -224,7 +224,7 @@
 			}
 		\end{verbatim}
 	\end{proof}
-	\begin{example}
+	\begin{example}{}{}
 		The \texttt{example} environment and the associated \texttt{tcolorbox} are provided by the following code in \texttt{NotesTeX.sty}:
 		\begin{verbatim}	
 		\tcolorboxenvironment{example}{
@@ -241,7 +241,7 @@
 		}
 		\end{verbatim}
 	\end{example}	
-	\begin{remark}
+	\begin{remark}{}{}
 		The \texttt{remark} environment and the associated \texttt{tcolorbox} are provided by the following code in \texttt{NotesTeX.sty}:\mn{Coexistence of \texttt{amsthm} environment and \texttt{mn}}
 		\begin{verbatim}
 		\tcolorboxenvironment{remark}{
@@ -275,7 +275,7 @@
 			}
 			\end{verbatim}
 	\end{fullpage}
-	\begin{remark}
+	\begin{remark}{}{}
 		Eliminating the \texttt{$\backslash$hrule} in the code will remove the lines surrounding the \texttt{fullpage} environment. Similarly, it is possible to change the vertical spacing after the \texttt{fullpage} is over, by modifying the \texttt{$\backslash$vspace\{\}} argument. 
 	\end{remark}
 	
@@ -288,10 +288,10 @@
 	\end{fullpage}
 
 	\subsection{Known Issues with Fullpage}\label{Sub: Fullpage_Issues}
-	\begin{remark}
+	\begin{remark}{}{}
 		Since the \texttt{fullpage} environment uses a \texttt{minipage}, and minipages do not work over multiple pages, one will need a new \texttt{fullpage} per page.	
 	\end{remark}
-	\begin{remark}
+	\begin{remark}{}{}
 		If the \texttt{twoside} option is enabled in the \texttt{documentclass} header, then the \texttt{fullpage} is known to bleed out beyond the margin.
 	\end{remark}
 
